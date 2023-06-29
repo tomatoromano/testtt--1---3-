@@ -1,0 +1,12 @@
+{% extends 'header.html' %}
+
+{% block content %}
+    <h1 style="margin-top: 100px">{% block title %} Users {% endblock %}</h1>
+    {% for user in users %}
+        <div class='user'>
+            <p><b>FirstName: </b>{{ user['firstname'] }}</p>
+            <h2><b>LastName: </b>{{ user['lastname'] }}</h2>
+            <p><b>Email:</b> {{ user['email'] }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
